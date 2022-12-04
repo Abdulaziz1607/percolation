@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width", initial-scale=1.0>
+    <title>Percolation</title>
+    <link rel="shortcut icon" href="#">
+
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <div class ="head" id ="personal_website">
+
+            <a href="https://abdulaziz-portfolio.vercel.app/" >
+                <img src="img/iconmonstr-user-20.svg" class = "perso" id="user">
+            </a>
+            <a href="https://www.linkedin.com/in/abdulaziz-sadi-cherif-44a7a915b/" >
+                <img src="img/iconmonstr-linkedin-3.svg" class = "perso" id = "link">
+            </a>
+
+            <a href="https://github.com/Abdulaziz1607" >
+                <img src="img/iconmonstr-github-1.svg" class = "perso"  id="git" >
+            </a>
+
+
+        </div>
+
+        <div class ="head" id ="head_">
+
+            <div>
+            <h1>Percolation </h1>
+            </div>
+
+            <div class="same_" id = "display">
+
+
+                <div class = "button_">
+                    <p id = "nbr_pot_sick" > Probability to be vaccinated: <span id="proba_vac"></span></p>
+                    <p id = "nbr_pot_sick" > Number of people not vaccinated: <span id="nbr_pot_sick_"></span></p>
+                    <p id = "nbr_sick" > Number of sick people: <span id="nbr_sick_"></span></p>
+
+                </div>
+
+                <div class = "button_" id ="but">
+                    <div>
+                        <button id ="play"  type="button" >LAUNCH THE SIMULATION</button>
+                    </div>
+            
+                    <div>
+                        <button id ="stop"  type="button" class = "button_2">STOP</button>
+                    </div>
+            
+                    <div >
+                        <button id ="reset"  type="button" class = "button_2">RESET</button>
+                    </div>
+                    <div class="slidecontainer">
+                        <input step ="0.01" type="range" min="0" max="1" value="0.59" class="slider" id="myRange">
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class = "game_board">
+                <canvas id="game"  width="400" height="400"></canvas>
+            </div>
+
+        </div>
+    </div>
+    <script src = "Person.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+    <script src = "Simulation.js"></script>
+    <script src = "main.js"></script>
+</body>
+</html>
