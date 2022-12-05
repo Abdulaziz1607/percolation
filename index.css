@@ -8,6 +8,65 @@ body{
 
 }
 
+.download{
+
+    color :#04AA6D;
+}
+.legend-scale ul {
+margin: 0;
+margin-bottom: 5px;
+padding: 0;
+float: left;
+list-style: none;
+}
+.legend-scale ul li {
+font-size: 80%;
+list-style: none;
+margin-left: 0;
+line-height: 18px;
+margin-bottom: 2px;
+}
+ul.legend-labels li span {
+display: block;
+float: left;
+height: 16px;
+width: 30px;
+margin-right: 5px;
+margin-left: 0;
+border: 1px solid #999;
+    }
+#game{
+
+    margin-bottom: 30%;
+}
+
+
+.legend-scale{
+
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+.nbr{
+
+    background-color:crimson;
+}
+button {
+
+    border-color: rgb(63, 24, 53);
+    color: white;
+    background-color: rgb(55, 24, 83);
+    margin-top: 30px;
+    margin-left: 30%;
+    width : 100%;    
+}
+
+button:hover{
+
+    scale: 105%;
+    transition: 0.3 ease-in-out;
+
+}
 /* The slider itself */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
@@ -19,6 +78,7 @@ body{
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
+    margin-bottom: 5%;
   }
   
   /* Mouse-over effects */
@@ -74,16 +134,11 @@ img {
 
 }
 
+.same_{
 
+    display: inline-block;
 
-
-.game_board{
-
-    margin-top : 5%;
-    max-width: 80%;
-    max-height: 50%;
 }
-
 .perso{
 
     width: 60%;
@@ -91,6 +146,13 @@ img {
     margin-top: 30%;
 
 }
+
+#display{
+
+    vertical-align: top;
+    margin-top : 10%
+    
+}s
 
 
 .perso:hover{

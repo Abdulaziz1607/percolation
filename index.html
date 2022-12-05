@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width", initial-scale=1.0>
     <title>Percolation</title>
     <link rel="shortcut icon" href="#">
-
     <link href="index.css" rel="stylesheet">
+
 </head>
+
 <body>
 
     <div>
@@ -24,54 +27,105 @@
             <a href="https://github.com/Abdulaziz1607" >
                 <img src="img/iconmonstr-github-1.svg" class = "perso"  id="git" >
             </a>
-
-
         </div>
 
         <div class ="head" id ="head_">
 
             <div>
-            <h1>Percolation </h1>
+                <h1>Percolation</h1>
             </div>
 
-            <div class="same_" id = "display">
+
+            <div class = "description">
+
+                <p>The percolation refers to the passage of a fluid through a more or less permeable environment.
+                    . The study of this phenomenon gives access to the knowledge of
+                    of the porosity of the considered environment. We are interested in the minimum porosity (or permeability) rate,
+                    necessary for the considered environment to be able to support the percolation: 
+                    This is called the critical probability.
+                </p>
+
+                
+                <p>
+                    the critical probability defines the threshold from which a phase transition appears in the considered environment, in other words, from this probability, there is a cluster that links the sides of our environment.
+                </p>
+                <h1>Model</h1>
+                <p>To illustrate this, consider COVID 19.
+
+                    A population will be represented by a matrix and each individual will be assigned a state according to a certain probability p. An individual can have the state 0: vaccinated, cannot transmit the disease if he is in contact with a sick person, the state 1: not vaccinated, can transmit the disease.
+                    
+                    A sick person, state 2, will be placed in the center of the population and we will study the propagation of the disease. This is a site-based environment (i.e. each node of the graph is represented by the elements of the matrix) and the critical probability p_critical for this kind of environment is, empirically, 0.59.
+                </p> 
+
+                <p>Have fun changing the probability and watch the disease spread!</p>
+
+                <p>
+                    <a>
+                        If you want to know more about the mathematical aspect of this theory, download my undergraduate study :)
+                        <a href="/perco_study/PERCOCO.pdf"  class= "download">Download PDF</a>
+
+                    </a>
+                </p>
+            </div>
+
+            <div class= "game">
 
 
-                <div class = "button_">
-                    <p id = "nbr_pot_sick" > Probability to be vaccinated: <span id="proba_vac"></span></p>
-                    <p id = "nbr_pot_sick" > Number of people not vaccinated: <span id="nbr_pot_sick_"></span></p>
-                    <p id = "nbr_sick" > Number of sick people: <span id="nbr_sick_"></span></p>
+                <div class="slidecontainer">
+                    <input step ="0.01" type="range" min="0" max="1" value="0.59" class="slider" id="myRange">
+                </div>
+                <div class = "stat">
+                    <p id = "nbr_pot_sick" > Probability to be vaccinated: <span id="proba_vac" class="nbr"></span></p>
+                    <p id = "nbr_pot_sick" > Number of people not vaccinated: <span id="nbr_pot_sick_" class="nbr"></span></p>
+                    <p id = "nbr_sick" > Number of sick people: <span id="nbr_sick_" class="nbr"></span></p>
+                </div>
+            </div>
 
+            <div>
+
+
+                <div class = "same_">
+                    <canvas id="game"  width="400" height="400"></canvas>
                 </div>
 
-                <div class = "button_" id ="but">
-                    <div>
-                        <button id ="play"  type="button" >LAUNCH THE SIMULATION</button>
-                    </div>
-            
-                    <div>
-                        <button id ="stop"  type="button" class = "button_2">STOP</button>
-                    </div>
-            
-                    <div >
-                        <button id ="reset"  type="button" class = "button_2">RESET</button>
-                    </div>
-                    <div class="slidecontainer">
-                        <input step ="0.01" type="range" min="0" max="1" value="0.59" class="slider" id="myRange">
-                    </div>
-            
-                </div>
-            </div>
-            
-            <div class = "game_board">
-                <canvas id="game"  width="400" height="400"></canvas>
-            </div>
+                <div class="same_" id = "display">
 
+            
+
+                    <div class = "button_" id ="but">
+                        <div>
+                            <button id ="play"  type="button" >LAUNCH THE SIMULATION</button>
+                        </div>
+                
+                        <div>
+                            <button id ="stop"  type="button" class = "button_2">STOP</button>
+                        </div>
+                
+                        <div >
+                            <button id ="reset"  type="button" class = "button_2">RESET</button>
+                        </div>
+
+                        <div class='legend-scale'>
+                            <ul class='legend-labels'>
+                              <li><span style='background:red;'></span>Not vaccinated</li>
+                              <li><span style='background:blue;'></span>Vaccinated</li>
+                              <li><span style='background:black;'></span>Sick</li>
+
+                            </ul>
+                        </div>
+                
+                    </div>
+                </div>
+                
+             
+            </div>
         </div>
     </div>
+
     <script src = "Person.js"></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
     <script src = "Simulation.js"></script>
     <script src = "main.js"></script>
+
 </body>
 </html>
